@@ -1,0 +1,19 @@
+let numeros = [10, 5, 22, 1, 7];
+let numeroSorteado = [];
+
+while (numeros.length > 0) {
+  let numeroMinimo = numeros[0];
+  let index = 0;
+
+  for (let i = 1; i < numeros.length; i++) {
+    if (numeros[i] < numeroMinimo) {
+      numeroMinimo = numeros[i];
+      index = i;
+    }
+  }
+
+  numeroSorteado.push(numeroMinimo);
+  numeros.splice(index, 1);
+}
+
+console.log(numeroSorteado);
